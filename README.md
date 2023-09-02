@@ -1,2 +1,2 @@
 # neuronfinance
- neuronfinance  wp theme
+ neuronfinance
