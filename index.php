@@ -150,17 +150,25 @@
 
 		<!-- ::::::::::::::::::::: start slider section:::::::::::::::::::::::::: -->
 		<section class="slider-area">
+			<?php 
+				get_header();
+				query_posts(array(
+				'post_type' => 'slider'
+				)); ?>
+				<?php
+				while (have_posts()) : the_post(); ?>
+
 		
 			<!-- slide item one -->
-			<div class="homepage-slider slider-bg1">
+			<div style="background-image: url(<?php the_post_thumbnail_url();?>);" class="homepage-slider slider-bg1">
 				<div class="display-table">
 					<div class="display-table-cell">
 						<div class="container">
 							<div class="row">
 								<div class="col-sm-7">
 									<div class="slider-content">
-										<h1>Prepare for the future with our advisors</h1>
-										<p>Interactively simplify 24/7 markets through 24/7 best practices. Authoritatively foster cutting-edge manufactured products and distinctive.</p>
+										<h1><?php the_title(); ?></h1>
+										<p><?php the_content(); ?></p>
 										<a href="#">Meet Experts <i class="fa fa-long-arrow-right"></i></a>
 									</div>
 								</div>
@@ -169,9 +177,9 @@
 					</div>
 				</div>
 			</div>
-			
+			<?php endwhile;?>	
 			<!-- slide item three -->
-			<div class="homepage-slider slider-bg3">
+			<!-- <div class="homepage-slider slider-bg3">
 				<div class="display-table">
 					<div class="display-table-cell">
 						<div class="container">
@@ -187,7 +195,7 @@
 						</div>
 					</div>
 				</div>
-			</div>
+			</div> -->
 			
 		</section><!-- slider area end -->
 	
