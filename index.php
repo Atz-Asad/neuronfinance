@@ -455,7 +455,7 @@
 				</div><!-- /.container -->
 			</div><!-- ./end copyright-wrapper -->
 		</footer>
-
+		<?php the_content();?>
 		<?php wp_footer();?>
 	</body>
 </html>
